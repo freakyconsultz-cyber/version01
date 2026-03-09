@@ -1,0 +1,15 @@
+
+body{margin:0;font-family:Arial,Helvetica,sans-serif}
+.main-header{background:#b8336a;color:white}
+.header-container{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px}
+.logo img{height:42px}
+.nav-menu{display:flex;gap:24px;align-items:center}
+.nav-menu a{color:white;text-decoration:none;font-weight:600}
+.dropdown{position:relative}
+.dropdown-menu{position:absolute;top:28px;background:white;color:#333;padding:10px 0;border-radius:8px;box-shadow:0 10px 25px rgba(0,0,0,0.15)}
+.dropdown-menu a{display:flex;gap:8px;padding:10px 18px;color:#333;text-decoration:none}
+.dropdown-menu a:hover{background:#f3f3f3}
+.login-btn{background:white;color:#b8336a;padding:6px 14px;border-radius:18px}
+.secondary-header{background:#f7f3f0;border-bottom:1px solid #eee}
+.secondary-container{max-width:1200px;margin:auto;display:flex;gap:30px;padding:10px 14px}
+.secondary-item{display:flex;gap:6px;align-items:center;color:#333;font-weight:500}
