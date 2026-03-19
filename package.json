@@ -10,7 +10,7 @@
 "preview": "vite preview",
 "lint": "eslint . --quiet",
 "lint:warn": "eslint .",
-"start": "node api/server.js"
+"start": "npm run build && node api/server.js"
 },
 
 "dependencies": {
