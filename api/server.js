@@ -17,13 +17,20 @@ const __dirname = path.dirname(__filename);
 app.use(cors());
 app.use(express.json());
 
-// DB connection (pool for stability)
-const db = mysql.createPool({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
-});
+// ✅ DB connection (SAFE)
+let db;
+
+try {
+  db = mysql.createPool({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+  });
+  console.log("DB connected");
+} catch (err) {
+  console.error("DB connection failed:", err);
+}
 
 // lead_id generator
 function generateLeadId() {
@@ -42,6 +49,12 @@ app.get("/api", (req, res) => {
 
 // form submit API
 app.post("/api/custom-request", (req, res) => {
+
+  // ✅ DB safety check
+  if (!db) {
+    return res.status(500).json({ success: false, message: "DB not connected" });
+  }
+
   const {
     name,
     phone,
@@ -146,7 +159,7 @@ app.post("/api/custom-request", (req, res) => {
 });
 
 
-// ✅ UPDATED SERVE FRONTEND (FIXED FOR HOSTINGER)
+// ✅ SERVE FRONTEND (Hostinger FIX)
 app.use(express.static(path.join(process.cwd(), "dist")));
 
 app.use((req, res) => {
