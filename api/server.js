@@ -18,12 +18,12 @@ app.use(cors());
 app.use(express.json());
 
 // DB connection (pool for stability)
-//const db = mysql.createPool({
-  //host: process.env.DB_HOST,
-  //user: process.env.DB_USER,
-  //password: process.env.DB_PASS,
-  //database: process.env.DB_NAME,
-//});
+const db = mysql.createPool({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+});
 
 // lead_id generator
 function generateLeadId() {
@@ -58,7 +58,6 @@ app.post("/api/custom-request", (req, res) => {
     page_url,
   } = req.body;
 
-  // Phone validation
   if (!/^[6-9]\d{9}$/.test(phone)) {
     return res.json({ success: false, message: "Invalid phone number" });
   }
@@ -147,12 +146,11 @@ app.post("/api/custom-request", (req, res) => {
 });
 
 
-// ✅ SERVE FRONTEND
-app.use(express.static(path.join(__dirname, "../dist")));
+// ✅ UPDATED SERVE FRONTEND (FIXED FOR HOSTINGER)
+app.use(express.static(path.join(process.cwd(), "dist")));
 
-// ✅ SAFE FALLBACK (FIXED)
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "../dist/index.html"));
+  res.sendFile(path.join(process.cwd(), "dist/index.html"));
 });
 
 
