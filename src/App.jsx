@@ -45,6 +45,9 @@ import AdminSupportPage from '@/pages/admin/AdminSupportPage';
 //Packages 
 import ChardhamPackage from "@/pages/Packages/Chardham/ChardhamPackagesPage";
 
+//Listing Pages
+import ChardhamListingPage from "@/pages/Packages/Listings/ChardhamListingPage";
+
 // Admin Protected Route
 function AdminProtectedRoute({ children }) {
   const { isAdminAuthenticated, loading } = useAdminAuth();
@@ -66,8 +69,12 @@ function App() {
                 {/* Public Routes */}
                 <Route path="/" element={<MainLayout />}>
                   <Route index element={<HomePage />} />
-                  <Route path="packages" element={<PackagesListPage />} />
-                  <Route path="package/:id" element={<PackageDetailsPage />} />
+                  <Route path="packages" element={<PackagesListPage />} />  
+
+                  {/* Package Details SEO Pages */}
+                  <Route path="packages/chardham-yatra" element={<ChardhamPackage />} />
+
+                  <Route path="packages/:id" element={<PackageDetailsPage />} />
                   <Route path="blog" element={<BlogPage />} />
                   <Route path="blog/:id" element={<BlogPostPage />} />
                   <Route path="custom-request" element={<CustomRequestPage />} />
@@ -80,9 +87,6 @@ function App() {
                   <Route path="bike-rentals" element={<BikeRentalPage />} />
                   <Route path="airport-transfers" element={<AirportPickDropPage />} />
                   <Route path="corporate-tours" element={<CorporateTourBookingPage />} />
-
-                   {/* PAckages Pages */}
-                   <Route path="packages/chardham-yatra/" element={<ChardhamPackage />} />
                   
                   <Route path="login" element={<LoginPage />} />
                   <Route
@@ -93,6 +97,10 @@ function App() {
                       </ProtectedRoute>
                     }
                   />
+
+                  {/* Chardham Listing Page */}
+                  <Route path="chardham-yatra-packages" element={<ChardhamListingPage />} />
+
                 </Route>
 
                 {/* Admin Routes */}
