@@ -18,12 +18,12 @@ app.use(cors());
 app.use(express.json());
 
 // DB connection (pool for stability)
-const db = mysql.createPool({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
-});
+//const db = mysql.createPool({
+  //host: process.env.DB_HOST,
+  //user: process.env.DB_USER,
+  //password: process.env.DB_PASS,
+  //database: process.env.DB_NAME,
+//});
 
 // lead_id generator
 function generateLeadId() {
