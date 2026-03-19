@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import packages from "@/data/Packages";
+import packages from "@/data/packages";
 import PackageCard from "@/components/PackageCard";
 import SupportSidebar from "@/components/SupportSidebar";
 import FAQAccordion from "@/components/FAQAccordion";
