@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import packages from "../data/packages";
-import PackageCard from "../components/PackageCard";
-import SupportSidebar from "../components/SupportSidebar";
-import FAQAccordion from "../components/FAQAccordion";
+import packages from "@/data/packages";
+import PackageCard from "@/components/PackageCard";
+import SupportSidebar from "@/components/SupportSidebar";
+import FAQAccordion from "@/components/FAQAccordion";
 import { Plus, Minus, HelpCircle } from 'lucide-react';
 
 /* FAQ DATA */
-
-
 const faqData = [
   {
     question: "Which dham should we go to first?",
