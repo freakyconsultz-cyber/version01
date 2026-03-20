@@ -49,7 +49,7 @@ function CustomRequestPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("/api/custom-request", {
+    const res = await fetch("https://api.freakytourz.com/custom-request.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -137,7 +137,7 @@ function CustomRequestPage() {
                   <input
                     type="number"
                     name="number_of_people"
-                    value={formData.number_of_people}
+                    value={formData.number_of_people || ""}
                     min="2"
                     onChange={handleInputChange}
                     className="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-primary outline-none"
