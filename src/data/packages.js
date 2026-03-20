@@ -147,6 +147,65 @@ const packages = [
     ],
     bestTimeToVisit: 'May to October',
     category: ['Pilgrimage', 'Nature'],
+    cluster: 'Char Dham',
+    amenities: ['AC Vehicle', 'Hotels', 'Meals', 'Yatra Registration'],
+    itinerary: [
+      { day: 1, title: 'Haridwar', description: 'Arrival and Ganga Aarti.' },
+      { day: 2, title: 'Barkot', description: 'Drive to Barkot.' },
+      { day: 3, title: 'Yamunotri', description: 'Trek and Darshan.' },
+      { day: 4, title: 'Uttarkashi', description: 'Drive and Vishwanath Temple.' },
+      { day: 5, title: 'Gangotri', description: 'Darshan and holy dip.' },
+      { day: 6, title: 'Guptkashi', description: 'Transfer for Kedarnath.' },
+      { day: 7, title: 'Kedarnath', description: 'Trek/Helicopter and Darshan.' },
+      { day: 8, title: 'Badrinath', description: 'Drive and Darshan.' },
+      { day: 9, title: 'Rudraprayag', description: 'Return journey start.' },
+      { day: 10, title: 'Haridwar', description: 'Drop at station.' }
+    ]
+  },
+
+  {
+    id: 'char-dham-yatra-haridwar',
+    name: 'Char Dham Yatra from Haridwar',
+    destination: 'Uttarakhand',
+    price: 20500,
+    duration: '10 Days / 9 Nights',
+    description: 'The ultimate spiritual journey to Yamunotri, Gangotri, Kedarnath, and Badrinath.',
+    images: [
+      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23',
+      'https://images.unsplash.com/photo-1609920658906-8223bd289001'
+    ],
+    bestTimeToVisit: 'May to October',
+    category: ['Pilgrimage', 'Nature'],
+    cluster: 'Char Dham',
+    amenities: ['AC Vehicle', 'Hotels', 'Meals', 'Yatra Registration'],
+    itinerary: [
+      { day: 1, title: 'Haridwar', description: 'Arrival and Ganga Aarti.' },
+      { day: 2, title: 'Barkot', description: 'Drive to Barkot.' },
+      { day: 3, title: 'Yamunotri', description: 'Trek and Darshan.' },
+      { day: 4, title: 'Uttarkashi', description: 'Drive and Vishwanath Temple.' },
+      { day: 5, title: 'Gangotri', description: 'Darshan and holy dip.' },
+      { day: 6, title: 'Guptkashi', description: 'Transfer for Kedarnath.' },
+      { day: 7, title: 'Kedarnath', description: 'Trek/Helicopter and Darshan.' },
+      { day: 8, title: 'Badrinath', description: 'Drive and Darshan.' },
+      { day: 9, title: 'Rudraprayag', description: 'Return journey start.' },
+      { day: 10, title: 'Haridwar', description: 'Drop at station.' }
+    ]
+  },
+
+  {
+    id: 'char-dham-yatra-delhi',
+    name: 'Char Dham Yatra Package from Delhi',
+    destination: 'Uttarakhand',
+    price: 22500,
+    duration: '11 Days / 10 Nights',
+    description: 'The ultimate spiritual journey to Yamunotri, Gangotri, Kedarnath, and Badrinath.',
+    images: [
+      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23',
+      'https://images.unsplash.com/photo-1609920658906-8223bd289001'
+    ],
+    bestTimeToVisit: 'May to October',
+    category: ['Pilgrimage', 'Nature'],
+    cluster: 'Char Dham',
     amenities: ['AC Vehicle', 'Hotels', 'Meals', 'Yatra Registration'],
     itinerary: [
       { day: 1, title: 'Haridwar', description: 'Arrival and Ganga Aarti.' },
@@ -175,6 +234,7 @@ const packages = [
     ],
     bestTimeToVisit: 'May to October',
     category: ['Pilgrimage', 'Nature'],
+    cluster: 'Char Dham',
     amenities: ['AC Vehicle', 'Hotels', 'Meals', 'Yatra Registration'],
     itinerary: [
       { day: 1, title: 'Haridwar', description: 'Arrive at Haridwar, have a warm welcome drink at your hotel. In the evening enjoy the cozy brezzes at ganga ghat while performing ganga arti Har Ki Pauri.' },
