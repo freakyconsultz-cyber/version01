@@ -69,7 +69,7 @@ function SupportSidebar() {
       <div className="space-y-3">
 
         <a
-          href="https://wa.me/919999999999"
+          href="https://wa.me/917017735435"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-between rounded-lg border px-4 py-3 hover:bg-green-50 transition"
@@ -87,7 +87,7 @@ function SupportSidebar() {
         </a>
 
         <a
-          href="tel:+919999999999"
+          href="tel:+917017735435"
           className="flex items-center justify-between rounded-lg border px-4 py-3 hover:bg-gray-50 transition"
         >
           <div className="flex items-center gap-3">
@@ -98,7 +98,7 @@ function SupportSidebar() {
           </div>
 
           <span className="text-sm font-semibold text-[#b8336a]">
-            +91 99999 99999
+            +91 70177 35435
           </span>
         </a>
 
