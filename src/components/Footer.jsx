@@ -1,125 +1,169 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  CreditCard,
+  Wallet,
+  ShieldCheck
+} from "lucide-react";
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
-
-function Footer() {
+const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white mt-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-xl font-bold text-white">f</span>
+    <footer className="bg-[#0b1220] text-gray-300 mt-12 rounded-t-2xl">
+
+      <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-6 gap-10">
+
+        {/* LOGO + BRAND */}
+        <div>
+          <img src="https://freakytourz.com/freakytourz-logo.png" alt="FreakyTourz" className="h-12 mb-3" />
+
+          <p className="text-pink-400 text-xs tracking-widest mb-3">
+            TRAVEL EXPERIENCES, NOT JUST TRIPS
+          </p>
+
+          <p className="text-sm text-gray-400 leading-relaxed">
+            Discover curated travel experiences across India — from spiritual
+            journeys and mountain adventures to beaches, road trips and more.
+          </p>
+
+          <div className="flex gap-3 mt-5">
+            {[Facebook, Instagram, Twitter].map((Icon, i) => (
+              <div key={i} className="w-9 h-9 bg-gray-800 hover:bg-pink-500 rounded-full flex items-center justify-center">
+                <Icon size={18} />
               </div>
-              <span className="text-xl font-bold">freakytourz</span>
-            </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Your trusted partner for exploring India's sacred and scenic destinations. Experience comfort, safety, and unforgettable journeys.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-pink-400">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-gray-400 hover:text-pink-400 transition-colors text-sm">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/packages" className="text-gray-400 hover:text-pink-400 transition-colors text-sm">
-                  India Tour Packages
-                </Link>
-              </li>
-              <li>
-                <Link to="/custom-request" className="text-gray-400 hover:text-pink-400 transition-colors text-sm">
-                  Custom Request
-                </Link>
-              </li>
-              <li>
-                <Link to="/dashboard" className="text-gray-400 hover:text-pink-400 transition-colors text-sm">
-                  Dashboard
-                </Link>
-              </li>
-               <li>
-                <Link to="/admin/login" className="text-gray-400 hover:text-pink-400 transition-colors text-sm">
-                  Admin
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Popular Destinations */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-pink-400">Popular Tours</h3>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>Char Dham Yatra 2026</li>
-              <li>Jaipur Heritage</li>
-              <li>Andaman Islands</li>
-              <li>Taj Mahal Agra</li>
-              <li>Goa Beaches</li>
-              <li>Brij Darshan</li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-pink-400">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start space-x-3 text-sm text-gray-400">
-                <MapPin className="w-5 h-5 text-pink-400 flex-shrink-0 mt-0.5" />
-                <span>123 Tourist Plaza, New Delhi, India 110001</span>
-              </li>
-              <li className="flex items-center space-x-3 text-sm text-gray-400">
-                <Phone className="w-5 h-5 text-pink-400 flex-shrink-0" />
-                <span>+91 98765 43210</span>
-              </li>
-              <li className="flex items-center space-x-3 text-sm text-gray-400">
-                <Mail className="w-5 h-5 text-pink-400 flex-shrink-0" />
-                <span>info@freakytourz.com</span>
-              </li>
-            </ul>
-
-            {/* Social Media */}
-            <div className="flex space-x-4 mt-6">
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} freakytourz. All rights reserved. | Crafted with ❤️ for travelers
-          </p>
+        {/* QUICK LINKS */}
+        <div>
+          <h4 className="text-white font-semibold mb-4 border-l-4 border-pink-500 pl-3">
+            Quick Links
+          </h4>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/packages">All Packages</Link></li>
+            <li><Link to="/blog">Travel Blog</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
+          </ul>
+        </div>
+
+        {/* TRAVEL EXPERIENCES */}
+        <div>
+          <h4 className="text-white font-semibold mb-4 border-l-4 border-pink-500 pl-3">
+            Travel Experiences
+          </h4>
+          <ul className="space-y-2 text-sm">
+            <li>Mountain Trips</li>
+            <li>Beach Vacations</li>
+            <li>Road Trips</li>
+            <li>Couple Trips</li>
+            <li>Solo Trips</li>
+            <li>Spiritual Yatra</li>
+            <li>Family Tours</li>
+          </ul>
+        </div>
+
+        {/* TOP DESTINATIONS */}
+        <div>
+          <h4 className="text-white font-semibold mb-4 border-l-4 border-pink-500 pl-3">
+            Top Indian Tour Packages
+          </h4>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/chardham-yatra-packages">Char Dham Yatra</Link></li>
+            <li><Link to="/jaipur-tour-packages">Jaipur Tour Packages</Link></li>
+            <li><Link to="/goa-tour-packages">Goa Tour Packages</Link></li>
+            <li><Link to="/kerala-tour-packages">Kerala Tour Packages</Link></li>
+            <li><Link to="/himachal-tour-packages">Himachal Tour Packages</Link></li>
+          </ul>
+        </div>
+
+        {/* SERVICES */}
+        <div>
+          <h4 className="text-white font-semibold mb-4 border-l-4 border-pink-500 pl-3">
+            Our Services
+          </h4>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/packages">Train Booking</Link></li>
+            <li><Link to="/cab-booking">Cab Booking</Link></li>
+            <li><Link to="/bike-rentals">Bike Rentals</Link></li>
+            <li><Link to="/hotel-booking">Hotel Booking</Link></li>
+            <li><Link to="/flight-booking">Flight Booking</Link></li>
+            <li><Link to="/corporate-tours">Corporate Tours</Link></li>
+            <li><Link to="/custom-request">Custom Itineraries</Link></li>
+          </ul>
+        </div>
+
+        {/* POPULAR SEARCHES */}
+        <div>
+          <h4 className="text-white font-semibold mb-4 border-l-4 border-pink-500 pl-3">
+            Popular Searches
+          </h4>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/chardham-yatra-packages">Char Dham Yatra 2026</Link></li>
+            <li><Link to="/kedarnath-tour-packages">Kedarnath Helicopter</Link></li>
+          </ul>
+        </div>
+
+      </div>
+
+      {/* SEO TEXT */}
+      <p className="text-xs text-gray-500 text-center max-w-3xl mx-auto mt-2 px-4">
+        Book curated travel experiences across India including Char Dham Yatra, Goa, Jaipur, Kerala and more with trusted local experts.
+      </p>
+
+      {/* TRUST STRIP */}
+      <div className="text-center text-xs text-gray-400 mt-4">
+        Trusted by 5000+ Travelers • Local Experts • 24×7 Support
+      </div>
+
+      {/* PAYMENT ICONS */}
+      <div className="flex justify-center gap-6 text-gray-400 mt-4">
+        <div className="flex items-center gap-2">
+          <CreditCard size={18} />
+          <span className="text-xs">Cards</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Wallet size={18} />
+          <span className="text-xs">UPI / Wallets</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <ShieldCheck size={18} />
+          <span className="text-xs">Secure</span>
         </div>
       </div>
+
+      {/* WHATSAPP CTA */}
+      <div className="flex justify-center mt-4">
+        <a
+          href="https://wa.me/917017735435"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 text-white px-5 py-2 rounded-full text-sm hover:bg-green-600"
+        >
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      {/* BOTTOM BAR */}
+      <div className="border-t border-gray-800 mt-6 pt-4 pb-2 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 px-4 max-w-7xl mx-auto">
+        <div className="flex items-center gap-2">
+          <img src="https://freakytourz.com/freakytourz-logo.png" className="h-6 opacity-70" alt="logo" />
+          <p>© {new Date().getFullYear()} FreakyTourz</p>
+        </div>
+
+        <div className="flex gap-4 flex-wrap justify-center mt-2 md:mt-0">
+          <Link to="/sitemap">Sitemap</Link>
+          <Link to="/privacy-policy">Privacy Policy</Link>
+          <Link to="/terms">Terms of Service</Link>
+        </div>
+      </div>
+
     </footer>
   );
-}
+};
 
 export default Footer;
