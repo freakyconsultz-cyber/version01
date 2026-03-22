@@ -251,8 +251,7 @@ function ChardhamListingPage() {
 
                 <p className="text-sm md:text-lg mb-3">
                   Compare Char Dham Yatra packages covering Kedarnath,
-                  Badrinath, Gangotri and Yamunotri with comfortable hotels
-                  and private taxi travel.
+                  Badrinath, Gangotri and Yamunotri. 
                 </p>
 
                 <div className="flex items-center gap-2 mb-3">
