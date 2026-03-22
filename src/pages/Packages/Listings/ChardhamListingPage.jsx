@@ -261,7 +261,7 @@ function ChardhamListingPage() {
                   <span className="text-sm">Rated by 1200+ travelers</span>
                 </div>
 
-                <div className="flex gap-2 flex-wrap text-xs">
+                <div className="flex gap-1 flex-wrap text-xs">
                   <span className="bg-white/20 px-2 py-1 rounded-full">5000+ Yatris</span>
                   <span className="bg-white/20 px-2 py-1 rounded-full">Local Experts</span>
                   <span className="bg-white/20 px-2 py-1 rounded-full">24×7 Support</span>
