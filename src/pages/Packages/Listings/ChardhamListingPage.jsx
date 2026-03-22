@@ -237,7 +237,7 @@ function ChardhamListingPage() {
                 backgroundImage:
                   "url(https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1600&auto=format&fit=crop)",
                 backgroundSize: "cover",
-                backgroundPosition: "center"
+                backgroundPosition: "center 30%"
               }}
             >
 
