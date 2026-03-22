@@ -241,9 +241,9 @@ function ChardhamListingPage() {
               }}
             >
 
-              <div className="absolute inset-0 bg-black/40 md:bg-black/60"></div>
+              <div className="absolute inset-0 bg-black/60 md:bg-black/60"></div>
 
-              <div className="relative max-w-xl md:max-w-2xl text-white drop-shadow-md">
+              <div className="relative max-w-xl">
 
                 <h1 className="text-2xl md:text-4xl font-bold mb-3">
                   Char Dham Yatra Packages 2026
