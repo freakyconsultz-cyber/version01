@@ -264,7 +264,6 @@ function ChardhamListingPage() {
                 <div className="flex gap-1 flex-wrap text-xs">
                   <span className="bg-white/20 px-2 py-1 rounded-full">5000+ Yatris</span>
                   <span className="bg-white/20 px-2 py-1 rounded-full">Local Experts & 24x7 Support</span>
-                  <span className="bg-white/20 px-2 py-1 rounded-full">24×7 Support</span>
                 </div>
 
               </div>
