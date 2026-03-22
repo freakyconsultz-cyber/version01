@@ -241,10 +241,9 @@ function ChardhamListingPage() {
               }}
             >
 
-              {/*<div className="absolute inset-0 bg-black/0 md:bg-black/60"></div>*/}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+              <div className="absolute inset-0 bg-black/40 md:bg-black/60"></div>
 
-              <div className="relative max-w-xl">
+              <div className="relative max-w-xl md:max-w-2xl text-white drop-shadow-md">
 
                 <h1 className="text-2xl md:text-4xl font-bold mb-3">
                   Char Dham Yatra Packages 2026
