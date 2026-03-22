@@ -237,11 +237,11 @@ function ChardhamListingPage() {
                 backgroundImage:
                   "url(https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1600&auto=format&fit=crop)",
                 backgroundSize: "cover",
-                backgroundPosition: "center 30%"
+                backgroundPosition: "center"
               }}
             >
 
-              <div className="absolute inset-0 bg-black/40 md:bg-black/60"></div>
+              <div className="absolute inset-0 bg-black/0 md:bg-black/60"></div>
 
               <div className="relative max-w-xl">
 
