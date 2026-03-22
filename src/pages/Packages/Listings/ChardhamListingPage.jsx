@@ -241,7 +241,7 @@ function ChardhamListingPage() {
               }}
             >
 
-              <div className="absolute inset-0 bg-black/20 md:bg-black/60"></div>
+              <div className="absolute inset-0 bg-black/40 md:bg-black/60"></div>
 
               <div className="relative max-w-xl">
 
